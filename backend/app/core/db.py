@@ -4,7 +4,12 @@ from app import crud
 from app.core.config import settings
 from app.models import User, UserCreate
 
-engine = create_engine(str(settings.SQLALCHEMY_DATABASE_URI))
+engine = create_engine(
+    str(settings.SQLALCHEMY_DATABASE_URI),
+    pool_pre_ping=True,
+    pool_size=5,
+    max_overflow=10,
+)
 
 
 # make sure all SQLModel models are imported (app.models) before initializing DB
