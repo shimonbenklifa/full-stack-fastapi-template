@@ -45,9 +45,9 @@ services:
       - key: ENVIRONMENT
         value: production
       - key: FRONTEND_HOST
-        value: https://frontend.onrender.com  # Replace with your actual frontend URL
+        value: https://full-stack-fastapi-template-1z56.onrender.com
       - key: BACKEND_CORS_ORIGINS
-        value: https://frontend.onrender.com  # Replace with your actual frontend URL
+        value: https://full-stack-fastapi-template-1z56.onrender.com
       - key: SMTP_HOST
         value: ""
       - key: SMTP_USER
@@ -77,4 +77,4 @@ services:
         destination: /index.html
     envVars:
       - key: VITE_API_URL
-        value: https://backend.onrender.com  # Replace with your actual backend URL
+        value: https://full-stack-fastapi-template-1z56.onrender.com
