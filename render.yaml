@@ -12,7 +12,6 @@ services:
     dockerContext: .
     plan: free
     healthCheckPath: /api/v1/utils/health-check/
-    startCommand: bash scripts/prestart.sh && fastapi run --workers 4 app/main.py
     envVars:
       - key: POSTGRES_SERVER
         fromDatabase:
