@@ -42,4 +42,4 @@ RUN --mount=type=cache,target=/root/.cache/uv \
 
 WORKDIR /app/backend/
 
-CMD ["bash", "-c", "bash scripts/prestart.sh && fastapi run --workers 4 app/main.py"]
+CMD ["bash", "-c", "bash scripts/prestart.sh && fastapi run --workers ${WEB_CONCURRENCY:-4} app/main.py"]
